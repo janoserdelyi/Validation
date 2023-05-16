@@ -12,7 +12,8 @@ public class Result<T>
 	protected internal Result (
 		bool isSuccess,
 		int errorCode,
-		string? errorMessage = null
+		string? errorMessage = null,
+		string? detailedErrorMessage = null
 	) {
 		if (isSuccess && errorCode != (int)Error.None) {
 			throw new InvalidOperationException ();
@@ -25,13 +26,15 @@ public class Result<T>
 		IsSuccess = isSuccess;
 		ErrorCode = errorCode;
 		ErrorMessage = errorMessage;
+		DetailedErrorMessage = detailedErrorMessage;
 	}
 
 	protected internal Result (
 		T value,
 		bool isSuccess,
 		int errorCode,
-		string? errorMessage = null
+		string? errorMessage = null,
+		string? detailedErrorMessage = null
 	) {
 		if (isSuccess && errorCode != (int)Error.None) {
 			throw new InvalidOperationException ();
@@ -45,6 +48,7 @@ public class Result<T>
 		IsSuccess = isSuccess;
 		ErrorCode = errorCode;
 		ErrorMessage = errorMessage;
+		DetailedErrorMessage = detailedErrorMessage;
 	}
 
 	public static Result<TValue> Success<TValue> (
@@ -55,9 +59,10 @@ public class Result<T>
 
 	public static Result<TValue> Failure<TValue> (
 		int error,
-		string? errorMessage = null
+		string? errorMessage = null,
+		string? detailedErrorMessage = null
 	) {
-		return new Result<TValue> (false, error, errorMessage);
+		return new Result<TValue> (false, error, errorMessage, detailedErrorMessage);
 	}
 
 	public static Result<TValue> Evaluate<TValue> (
