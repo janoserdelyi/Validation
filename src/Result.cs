@@ -6,7 +6,8 @@ public class Result<T>
 	public bool IsFailure => !IsSuccess;
 	public int ErrorCode { get; }
 	public T? Value { get; }
-	public string? ErrorMessage { get; } // optional?
+	public string? ErrorMessage { get; }
+	public string? DetailedErrorMessage { get; } // for stack traces and the like. non-public-facing error details
 
 	protected internal Result (
 		bool isSuccess,
@@ -70,7 +71,6 @@ public class Result<T>
 	}
 }
 
-// i should roll these in to Result
 public static class ResultExtensions
 {
 	public static Result<T> Ensure<T> (
