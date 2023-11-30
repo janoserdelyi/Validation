@@ -4,6 +4,28 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<PackageId>com.janoserdelyi.Validation</PackageId>
+		<Authors>Janos Erdelyi</Authors>
+		<Company>Janos Erdelyi</Company>
+		<Product>Validation</Product>
+		<Description>Base element used in validations. Not used stand-alone</Description>
+		<Version>1.0.0</Version>
+		<AssemblyName>Validation</AssemblyName>
+		<!-- for packaging -->
+		<EnablePackageValidation>true</EnablePackageValidation>
+    	<!-- Optional: Detect breaking changes from a previous stable version -->
+    	<!-- <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion> -->
+		<!-- automatically generate package on build -->
+		<!-- <GeneratePackageOnBuild>true</GeneratePackageOnBuild> -->
+		<!-- <PackageLicenseExpression>AGPL</PackageLicenseExpression> -->
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="/"/>
+		<None Include="../LICENSE" Pack="true" PackagePath="/"/>
+	</ItemGroup>
 
 </Project>
