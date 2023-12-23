@@ -10,8 +10,8 @@
 		<Company>Janos Erdelyi</Company>
 		<Product>Validation</Product>
 		<Description>Base element used in validations. Not used stand-alone</Description>
-		<Version>1.0.2</Version>
-		<AssemblyName>Validation</AssemblyName>
+		<Version>1.0.3</Version>
+		<AssemblyName>com.janoserdelyi.Validation</AssemblyName>
 		<RootNamespace>com.janoserdelyi.Validation</RootNamespace>
 		<!-- for packaging -->
 		<EnablePackageValidation>true</EnablePackageValidation>
