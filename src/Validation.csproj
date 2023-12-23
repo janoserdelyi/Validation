@@ -10,7 +10,7 @@
 		<Company>Janos Erdelyi</Company>
 		<Product>Validation</Product>
 		<Description>Base element used in validations. Not used stand-alone</Description>
-		<Version>1.0.3</Version>
+		<Version>1.0.4</Version>
 		<AssemblyName>com.janoserdelyi.Validation</AssemblyName>
 		<RootNamespace>com.janoserdelyi.Validation</RootNamespace>
 		<!-- for packaging -->
